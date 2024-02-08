@@ -1,0 +1,33 @@
+<p>hero works!</p>
+<h1>Componente hero</h1>
+
+<dl>
+    <dt> Nombre: </dt>
+    <dd> {{nombre}} </dd>
+
+    <dt> Edad: </dt>
+    <dd> {{edad}} </dd>
+
+    <dt> Método: </dt>
+    <dd> {{ dimeDescripcion() }} </dd>
+
+    <dt> En mayúsculas: </dt>
+    <dd> {{ nombreEnMayusculas }} </dd>
+
+</dl>
+
+<input value="Cambiar nombre" 
+type="button" 
+*ngIf="nombre === 'ironman'"
+class="btn btn-primary mx-2"
+(click)="cambiarNombre()">
+<input value="Cambiar edad"
+*ngIf="edad === 45" 
+type="button" 
+class="btn btn-primary mx-2"
+(click)="cambiarEdad()">
+
+<input value="Reset" 
+type="button" 
+class="btn btn-primary mx-2"
+(click)="reset()">
